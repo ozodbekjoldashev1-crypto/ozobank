@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>OzoBank | Digital Banking Project</title>
-    < meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OzoBank | Data Science Portfolio Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
         :root {
             --primary: #0a2540;
+            --secondary: #003b6f;
             --accent: #00d4ff;
-            --bg: #f4f6f8;
-            --text: #1a1a1a;
+            --background: #f4f6f8;
             --card: #ffffff;
+            --text: #1a1a1a;
         }
 
         * {
@@ -21,19 +22,19 @@
         body {
             margin: 0;
             font-family: "Segoe UI", Arial, sans-serif;
-            background: var(--bg);
+            background: var(--background);
             color: var(--text);
             line-height: 1.6;
         }
 
-        /* NAVBAR */
+        /* HEADER */
         header {
             background: var(--primary);
+            color: white;
             padding: 18px 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            color: white;
         }
 
         header h1 {
@@ -56,7 +57,7 @@
 
         /* HERO */
         .hero {
-            background: linear-gradient(135deg, #0a2540, #003b6f);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
             text-align: center;
             padding: 110px 20px;
@@ -78,7 +79,7 @@
             font-size: 16px;
             border: none;
             background: var(--accent);
-            color: #003b6f;
+            color: var(--primary);
             font-weight: bold;
             cursor: pointer;
             border-radius: 6px;
@@ -86,7 +87,7 @@
 
         /* SECTIONS */
         section {
-            padding: 80px 50px;
+            padding: 80px 40px;
             max-width: 1200px;
             margin: auto;
         }
@@ -108,7 +109,7 @@
             background: var(--card);
             padding: 35px 25px;
             border-radius: 14px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
             text-align: center;
         }
 
@@ -122,21 +123,20 @@
             margin-bottom: 10px;
         }
 
-        /* DATA SCIENCE SECTION */
-        .data {
-            background: #ffffff;
+        /* DATA SECTION */
+        .data-section {
+            background: white;
             border-radius: 16px;
             padding: 60px 40px;
-            margin-top: 40px;
         }
 
-        .data ul {
+        .data-section ul {
             max-width: 700px;
             margin: auto;
             font-size: 17px;
         }
 
-        .data li {
+        .data-section li {
             margin-bottom: 12px;
         }
 
@@ -149,6 +149,20 @@
             margin-top: 80px;
             font-size: 14px;
             opacity: 0.9;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+            }
+
+            nav {
+                margin-top: 10px;
+            }
+
+            .hero h2 {
+                font-size: 32px;
+            }
         }
     </style>
 </head>
@@ -168,7 +182,9 @@
 <div class="hero">
     <h2>OzoBank</h2>
     <p>Simulated Digital Bank • Data Science Portfolio Project</p>
-    <button onclick="alert('Demo project – no real accounts')">View Demo</button>
+    <button onclick="alert('Educational demo project. No real banking services.')">
+        View Demo
+    </button>
 </div>
 
 <section>
@@ -177,7 +193,7 @@
         <div class="card">
             <span>🏦</span>
             <h4>FinTech Simulation</h4>
-            <p>OzoBank is a fictional digital bank created for data analysis and portfolio demonstration.</p>
+            <p>A fictional digital bank created for analytics and learning purposes.</p>
         </div>
         <div class="card">
             <span>🗄️</span>
@@ -186,33 +202,34 @@
         </div>
         <div class="card">
             <span>📊</span>
-            <h4>Analytics</h4>
-            <p>Data analyzed using SQL queries, Excel dashboards, and Python.</p>
+            <h4>Excel Analytics</h4>
+            <p>Pivot tables and dashboards for business insights.</p>
         </div>
         <div class="card">
             <span>🐍</span>
-            <h4>Python</h4>
-            <p>Pandas, NumPy, Matplotlib used for insights and reporting.</p>
+            <h4>Python Analysis</h4>
+            <p>Pandas, NumPy, and visualization libraries.</p>
         </div>
     </div>
 </section>
 
-<section class="data">
+<section class="data-section">
     <h3>Data Science Focus</h3>
     <ul>
-        <li>✔ Customer segmentation and transaction analysis</li>
-        <li>✔ Monthly cash flow and balance trends</li>
-        <li>✔ Fraud-like pattern detection (simulated)</li>
-        <li>✔ Business-oriented insights for decision making</li>
+        <li>Customer segmentation and transaction behavior analysis</li>
+        <li>Monthly cash flow and balance trends</li>
+        <li>Simulated fraud and anomaly detection logic</li>
+        <li>Business insights derived from SQL and Python</li>
     </ul>
 </section>
 
 <footer>
-    © 2025 OzoBank — Educational Portfolio Project (No real banking services)
+    © 2025 OzoBank — Educational Portfolio Project (No real financial services)
 </footer>
 
 </body>
 </html>
+
 
 
 
