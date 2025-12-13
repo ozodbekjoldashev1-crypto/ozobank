@@ -1,69 +1,218 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>OzoBank</title>
+    <title>OzoBank | Digital Banking Project</title>
+    < meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
+        :root {
+            --primary: #0a2540;
+            --accent: #00d4ff;
+            --bg: #f4f6f8;
+            --text: #1a1a1a;
+            --card: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f6f8;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
         }
+
+        /* NAVBAR */
         header {
-            background: #0a2540;
-            color: white;
-            padding: 20px 40px;
+            background: var(--primary);
+            padding: 18px 50px;
             display: flex;
             justify-content: space-between;
-        }
-        header a {
+            align-items: center;
             color: white;
-            margin-left: 20px;
-            text-decoration: none;
         }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 15px;
+            opacity: 0.9;
+        }
+
+        nav a:hover {
+            opacity: 1;
+        }
+
+        /* HERO */
         .hero {
-            padding: 100px 20px;
-            text-align: center;
             background: linear-gradient(135deg, #0a2540, #003b6f);
             color: white;
+            text-align: center;
+            padding: 110px 20px;
         }
-        .section {
-            padding: 60px 40px;
+
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .hero button {
+            margin-top: 30px;
+            padding: 14px 32px;
+            font-size: 16px;
+            border: none;
+            background: var(--accent);
+            color: #003b6f;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 80px 50px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        section h3 {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 50px;
+        }
+
+        /* CARDS */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--card);
+            padding: 35px 25px;
+            border-radius: 14px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
             text-align: center;
         }
+
+        .card span {
+            font-size: 40px;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .card h4 {
+            margin-bottom: 10px;
+        }
+
+        /* DATA SCIENCE SECTION */
+        .data {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 60px 40px;
+            margin-top: 40px;
+        }
+
+        .data ul {
+            max-width: 700px;
+            margin: auto;
+            font-size: 17px;
+        }
+
+        .data li {
+            margin-bottom: 12px;
+        }
+
+        /* FOOTER */
         footer {
-            background: #0a2540;
+            background: var(--primary);
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 30px;
+            margin-top: 80px;
+            font-size: 14px;
+            opacity: 0.9;
         }
     </style>
 </head>
+
 <body>
 
 <header>
-    <h2>OzoBank</h2>
+    <h1>OzoBank</h1>
     <nav>
         <a href="#">Home</a>
-        <a href="#">Accounts</a>
-        <a href="#">Login</a>
+        <a href="#">Project</a>
+        <a href="#">Data</a>
+        <a href="#">Contact</a>
     </nav>
 </header>
 
 <div class="hero">
-    <h1>Welcome to OzoBank</h1>
-    <p>Your smart digital banking solution</p>
+    <h2>OzoBank</h2>
+    <p>Simulated Digital Bank • Data Science Portfolio Project</p>
+    <button onclick="alert('Demo project – no real accounts')">View Demo</button>
 </div>
 
-<div class="section">
-    <h2>Why OzoBank?</h2>
-    <p>Secure • Fast • Modern • Reliable</p>
-</div>
+<section>
+    <h3>Project Overview</h3>
+    <div class="cards">
+        <div class="card">
+            <span>🏦</span>
+            <h4>FinTech Simulation</h4>
+            <p>OzoBank is a fictional digital bank created for data analysis and portfolio demonstration.</p>
+        </div>
+        <div class="card">
+            <span>🗄️</span>
+            <h4>SQL Server</h4>
+            <p>Relational database with customers, accounts, and transactions.</p>
+        </div>
+        <div class="card">
+            <span>📊</span>
+            <h4>Analytics</h4>
+            <p>Data analyzed using SQL queries, Excel dashboards, and Python.</p>
+        </div>
+        <div class="card">
+            <span>🐍</span>
+            <h4>Python</h4>
+            <p>Pandas, NumPy, Matplotlib used for insights and reporting.</p>
+        </div>
+    </div>
+</section>
+
+<section class="data">
+    <h3>Data Science Focus</h3>
+    <ul>
+        <li>✔ Customer segmentation and transaction analysis</li>
+        <li>✔ Monthly cash flow and balance trends</li>
+        <li>✔ Fraud-like pattern detection (simulated)</li>
+        <li>✔ Business-oriented insights for decision making</li>
+    </ul>
+</section>
 
 <footer>
-    © 2025 OzoBank
+    © 2025 OzoBank — Educational Portfolio Project (No real banking services)
 </footer>
 
 </body>
 </html>
+
+
+
