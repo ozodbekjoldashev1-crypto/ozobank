@@ -1,231 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>OzoBank | Data Science Portfolio Project</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OzoBank | Digital Banking Project</title>
 
-    <style>
-        :root {
-            --primary: #0a2540;
-            --secondary: #003b6f;
-            --accent: #00d4ff;
-            --background: #f4f6f8;
-            --card: #ffffff;
-            --text: #1a1a1a;
-        }
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+    }
 
-        * {
-            box-sizing: border-box;
-        }
+    header {
+      background: #0a2540;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-        body {
-            margin: 0;
-            font-family: "Segoe UI", Arial, sans-serif;
-            background: var(--background);
-            color: var(--text);
-            line-height: 1.6;
-        }
+    header a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+    }
 
-        /* HEADER */
-        header {
-            background: var(--primary);
-            color: white;
-            padding: 18px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    .hero {
+      padding: 50px;
+      text-align: center;
+      background: #e8eff7;
+    }
 
-        header h1 {
-            margin: 0;
-            font-size: 24px;
-            letter-spacing: 1px;
-        }
+    .section {
+      padding: 40px;
+      text-align: center;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 25px;
-            font-size: 15px;
-            opacity: 0.9;
-        }
+    .accounts-section {
+      padding: 40px 10px;
+    }
 
-        nav a:hover {
-            opacity: 1;
-        }
+    .account-card {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 10px auto;
+      max-width: 600px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: left;
+      font-size: 16px;
+    }
 
-        /* HERO */
-        .hero {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            text-align: center;
-            padding: 110px 20px;
-        }
-
-        .hero h2 {
-            font-size: 42px;
-            margin-bottom: 10px;
-        }
-
-        .hero p {
-            font-size: 18px;
-            opacity: 0.9;
-        }
-
-        .hero button {
-            margin-top: 30px;
-            padding: 14px 32px;
-            font-size: 16px;
-            border: none;
-            background: var(--accent);
-            color: var(--primary);
-            font-weight: bold;
-            cursor: pointer;
-            border-radius: 6px;
-        }
-
-        /* SECTIONS */
-        section {
-            padding: 80px 40px;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        section h3 {
-            text-align: center;
-            font-size: 30px;
-            margin-bottom: 50px;
-        }
-
-        /* CARDS */
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 25px;
-        }
-
-        .card {
-            background: var(--card);
-            padding: 35px 25px;
-            border-radius: 14px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-            text-align: center;
-        }
-
-        .card span {
-            font-size: 40px;
-            display: block;
-            margin-bottom: 15px;
-        }
-
-        .card h4 {
-            margin-bottom: 10px;
-        }
-
-        /* DATA SECTION */
-        .data-section {
-            background: white;
-            border-radius: 16px;
-            padding: 60px 40px;
-        }
-
-        .data-section ul {
-            max-width: 700px;
-            margin: auto;
-            font-size: 17px;
-        }
-
-        .data-section li {
-            margin-bottom: 12px;
-        }
-
-        /* FOOTER */
-        footer {
-            background: var(--primary);
-            color: white;
-            text-align: center;
-            padding: 30px;
-            margin-top: 80px;
-            font-size: 14px;
-            opacity: 0.9;
-        }
-
-        @media (max-width: 600px) {
-            header {
-                flex-direction: column;
-            }
-
-            nav {
-                margin-top: 10px;
-            }
-
-            .hero h2 {
-                font-size: 32px;
-            }
-        }
-    </style>
+    footer {
+      background: #0a2540;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-    <h1>OzoBank</h1>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Project</a>
-        <a href="#">Data</a>
-        <a href="#">Contact</a>
-    </nav>
+  <h2>OzoBank</h2>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Accounts</a>
+    <a href="#">Login</a>
+  </nav>
 </header>
 
 <div class="hero">
-    <h2>OzoBank</h2>
-    <p>Simulated Digital Bank • Data Science Portfolio Project</p>
-    <button onclick="alert('Educational demo project. No real banking services.')">
-        View Demo
-    </button>
+  <h1>Welcome to OzoBank</h1>
+  <p>Your smart modern digital banking solution</p>
 </div>
 
-<section>
-    <h3>Project Overview</h3>
-    <div class="cards">
-        <div class="card">
-            <span>🏦</span>
-            <h4>FinTech Simulation</h4>
-            <p>A fictional digital bank created for analytics and learning purposes.</p>
-        </div>
-        <div class="card">
-            <span>🗄️</span>
-            <h4>SQL Server</h4>
-            <p>Relational database with customers, accounts, and transactions.</p>
-        </div>
-        <div class="card">
-            <span>📊</span>
-            <h4>Excel Analytics</h4>
-            <p>Pivot tables and dashboards for business insights.</p>
-        </div>
-        <div class="card">
-            <span>🐍</span>
-            <h4>Python Analysis</h4>
-            <p>Pandas, NumPy, and visualization libraries.</p>
-        </div>
-    </div>
+<div class="section">
+  <h2>Why OzoBank?</h2>
+  <p>Secure • Fast • Modern • Reliable</p>
+</div>
+
+<!-- ⭐ CUSTOMER ACCOUNTS SECTION -->
+<section class="accounts-section">
+  <h2 style="text-align:center;">Customer Accounts</h2>
+  <div id="accounts-list"></div>
 </section>
 
-<section class="data-section">
-    <h3>Data Science Focus</h3>
-    <ul>
-        <li>Customer segmentation and transaction behavior analysis</li>
-        <li>Monthly cash flow and balance trends</li>
-        <li>Simulated fraud and anomaly detection logic</li>
-        <li>Business insights derived from SQL and Python</li>
-    </ul>
-</section>
-
-<footer>
-    © 2025 OzoBank — Educational Portfolio Project (No real financial services)
-</footer>
+<!-- ⭐ API SCRIPT -->
 <script>
 async function loadAccounts() {
     const url = "https://693e726712c964ee6b6d6567.mockapi.io/accounts";
@@ -237,13 +102,7 @@ async function loadAccounts() {
         let html = "";
         accounts.forEach(acc => {
             html += `
-                <div style="
-                    background:white;
-                    padding:15px;
-                    border-radius:10px;
-                    margin:10px 0;
-                    box-shadow:0 2px 6px rgba(0,0,0,0.1);
-                ">
+                <div class="account-card">
                     <strong>${acc.name}</strong><br>
                     Account Number: ${acc.accountNumber}<br>
                     Balance: ${acc.balance} ${acc.currency}<br>
@@ -262,13 +121,13 @@ async function loadAccounts() {
 loadAccounts();
 </script>
 
+<footer>
+  © 2025 OzoBank — Digital Banking Portfolio Project
+</footer>
+
 </body>
 </html>
-https://693e726712c964ee6b6d6567.mockapi.io/accounts
-<section class="accounts-section">
-  <h2 style="text-align:center;">Customer Accounts</h2>
-  <div id="accounts-list" style="max-width:600px;margin:auto;"></div>
-</section>
+
 
 
 
