@@ -226,9 +226,49 @@
 <footer>
     © 2025 OzoBank — Educational Portfolio Project (No real financial services)
 </footer>
+<script>
+async function loadAccounts() {
+    const url = "https://693e726712c964ee6b6d6567.mockapi.io/accounts";
+
+    try {
+        const res = await fetch(url);
+        const accounts = await res.json();
+
+        let html = "";
+        accounts.forEach(acc => {
+            html += `
+                <div style="
+                    background:white;
+                    padding:15px;
+                    border-radius:10px;
+                    margin:10px 0;
+                    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+                ">
+                    <strong>${acc.name}</strong><br>
+                    Account Number: ${acc.accountNumber}<br>
+                    Balance: ${acc.balance} ${acc.currency}<br>
+                    Created: ${acc.createdAt}
+                </div>
+            `;
+        });
+
+        document.getElementById("accounts-list").innerHTML = html;
+
+    } catch (error) {
+        document.getElementById("accounts-list").innerHTML = "Error loading accounts.";
+    }
+}
+
+loadAccounts();
+</script>
 
 </body>
 </html>
+https://693e726712c964ee6b6d6567.mockapi.io/accounts
+<section class="accounts-section">
+  <h2 style="text-align:center;">Customer Accounts</h2>
+  <div id="accounts-list" style="max-width:600px;margin:auto;"></div>
+</section>
 
 
 
